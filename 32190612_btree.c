@@ -46,12 +46,12 @@ void split(bn* x) {
 
 	//x가 가지고 있던 키 중 i+t부터 z로 옮김
 	for (i = 0; i < t - 1; i++) {
-		z->keys[i] = x->keys[i + t];
+		z->keys[i] = x->keys[((x->key_num)/2)+1+i];
 	}
 
 	//x가 가리키던 포인터를 z로 옮김
-	for (i = 0; i < t; i++) {
-		z->child_pointer[i] = x->child_pointer[i + t];
+	for (i = 0; i < t - 1; i++) {
+		z->child_pointer[i] = x->child_pointer[((x->key_num)/2)+1+i];
 	}
 }
 
