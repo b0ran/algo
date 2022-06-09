@@ -44,7 +44,7 @@ void split(bn* x) {
 	z = newNode();
 	z->key_num = t - 1;		//새로 생긴 노드 z의 키의 개수
 
-	//x가 가지고 있던 키 중 i+t부터 z로 옮김
+	//x가 가지고 있던 키 중 middle key 다음 인덱스부터 z로 옮김
 	for (i = 0; i < t - 1; i++) {
 		z->keys[i] = x->keys[((x->key_num)/2)+1+i];
 	}
