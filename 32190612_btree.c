@@ -21,14 +21,14 @@ bn* node;
 bt* tree;
 
 //노드 생성 함수
-bn* newNode() {
+void newNode() {
 	node = (struct bTreeNode*)malloc(sizeof(struct bTreeNode));
 	node->child_pointer = (struct bTreeNode**)malloc((2*t) * sizeof(struct bTreeNode*));
 	node->key_num = 0;	//초기 노드가 가지는 키의 개수는 0개
 }
 
 //빈 트리 생성 함수
-bt* emptyTree() {
+void emptyTree() {
 	tree = (struct bTree*)malloc(sizeof(struct bTree));
 	tree->root = newNode();
 	tree->node_num = 1;		//루트만 생성되었을 때 전체 트리의 노드의 개수는 1개
